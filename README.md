@@ -40,6 +40,14 @@ How to Use
 ------
 See the [Sample Application](https://github.com/onatakduman/bluetoothie/tree/master/app/src/main/java/com/onatakduman/bluetoothieapp) for use. 
 
+Update Checklist
+------
+- [x] Bluetooth Support
+- [ ] BLE Support
+- [ ] ViewModel usage example
+- [ ] More description of usage
+
+
 Reference Libraries
 ------
 1. [douglasjunior/AndroidBluetoothLibrary](https://github.com/douglasjunior/AndroidBluetoothLibrary)
