@@ -16,7 +16,7 @@ allprojects {
 1. Add the dependency
 ```gradle
 dependencies {
-    implementation 'com.github.onatakduman:bluetoothie:Tag'
+    implementation 'com.github.onatakduman:bluetoothie:00.00.01-BETA'
 }
 ```
 
