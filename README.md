@@ -21,7 +21,7 @@ allprojects {
 2. Add the dependency
 ```gradle
 dependencies {
-    implementation 'com.github.onatakduman:bluetoothie:00.00.01-BETA'
+    implementation 'com.github.onatakduman:bluetoothie:0.0.1'
 }
 ```
 
