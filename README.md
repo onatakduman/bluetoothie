@@ -1,5 +1,5 @@
 ## Bluetoothie
-![Logo](https://github.com/onatakduman/bluetoothie/art/bluetoothie_logo.png")
+![Logo](https://github.com/onatakduman/bluetoothie/art/bluetoothie_logo.png)
 [![](https://jitpack.io/v/onatakduman/bluetoothie.svg)](https://jitpack.io/#onatakduman/bluetoothie)
 
 While I was preparing Bluetoothie, I was inspired by [douglasjunior/AndroidBluetoothLibrary](https://github.com/douglasjunior/AndroidBluetoothLibrary). It likely similar in most cases, 
