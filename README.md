@@ -1,6 +1,11 @@
 ## Bluetoothie
 [![](https://jitpack.io/v/onatakduman/bluetoothie.svg)](https://jitpack.io/#onatakduman/bluetoothie)
 
+While I was preparing Bluetoothie, I was inspired by [douglasjunior/AndroidBluetoothLibrary](https://github.com/douglasjunior/AndroidBluetoothLibrary). It likely similar in most cases, 
+I jus change some data reading buffer. It looks like Kotlin version of [this](https://github.com/douglasjunior/AndroidBluetoothLibrary) library.
+1. [douglasjunior/AndroidBluetoothLibrary](https://github.com/douglasjunior/AndroidBluetoothLibrary) 's data read function is buffers 1024 bytes and does not triger read function until its full.
+2. [glodanif/BluetoothChat](https://github.com/glodanif/BluetoothChat) I inspired file transfer progress method.
+
 Installation
 ------
 1. Add it in your root build.gradle at the end of repositories:
@@ -47,7 +52,7 @@ Researched BLE Libraries
 2. [Polidea/RxAndroidBle](https://github.com/Polidea/RxAndroidBle)
 3. [NordicSemiconductor/Android-BLE-Library](https://github.com/NordicSemiconductor/Android-BLE-Library)
 4. [kai-morich/SimpleBluetoothLeTerminal](https://github.com/kai-morich/SimpleBluetoothLeTerminal)
-4. [https://github.com/Lembed/Android-BLE-Terminal](https://github.com/Lembed/Android-BLE-Terminal)
+4. [Lembed/Android-BLE-Terminal](https://github.com/Lembed/Android-BLE-Terminal)
 
 Researched Bluetooth Serial Libraries
 ------
