@@ -1,6 +1,6 @@
 ## Bluetoothie
 <p align="center">
-  <img src="https://github.com/onatakduman/bluetoothie/blob/master/art/bluetoothie_logo.png" />
+  <img src="https://github.com/onatakduman/bluetoothie/blob/master/art/bluetoothie_logo.png" alt="drawing" width="170"/>
 </p>
 
 [![](https://jitpack.io/v/onatakduman/bluetoothie.svg)](https://jitpack.io/#onatakduman/bluetoothie)
