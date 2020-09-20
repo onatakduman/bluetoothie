@@ -45,7 +45,7 @@ android {
         minSdkVersion project.ext.minimumSdkVersion
         targetSdkVersion project.ext.targetSdkVersion
         versionCode generateVersionCode() // 140010203
-        versionName generateVersionName() // 1.2.3-BETA
+        versionName generateVersionName() // 00.00.01-BETA
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
     }
