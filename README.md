@@ -13,18 +13,49 @@ allprojects {
 }
 ```
 
-1. Add the dependency
+2. Add the dependency
 ```gradle
 dependencies {
     implementation 'com.github.onatakduman:bluetoothie:00.00.01-BETA'
 }
 ```
 
+3. Add Permissions to 'AndroidManifest.xml'
+```xml
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" >
+  <uses-permission android:name="android.permission.BLUETOOTH" />
+  <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+  <uses-permission android:name="android.permission.BLUETOOTH_PRIVILEGED" />
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+  ...
+</manifest>
+```
+
+How to Use
+------
+See the [Sample Application](https://github.com/onatakduman/bluetoothie/tree/master/app/src/main/java/com/onatakduman/bluetoothieapp) for use. 
+
 Reference Libraries
 ------
 1. [douglasjunior/AndroidBluetoothLibrary](https://github.com/douglasjunior/AndroidBluetoothLibrary)
 2. [glodanif/BluetoothChat](https://github.com/glodanif/BluetoothChat)
 
+
+Researched BLE Libraries
+------
+1. [Jasonchenlijian/FastBle](https://github.com/Jasonchenlijian/FastBle)
+2. [Polidea/RxAndroidBle](https://github.com/Polidea/RxAndroidBle)
+3. [NordicSemiconductor/Android-BLE-Library](https://github.com/NordicSemiconductor/Android-BLE-Library)
+4. [kai-morich/SimpleBluetoothLeTerminal](https://github.com/kai-morich/SimpleBluetoothLeTerminal)
+4. [https://github.com/Lembed/Android-BLE-Terminal](https://github.com/Lembed/Android-BLE-Terminal)
+
+Researched Bluetooth Serial Libraries
+------
+1. [IvBaranov/RxBluetooth](https://github.com/IvBaranov/RxBluetooth)
+2. [OmarAflak/Bluetooth-Library](https://github.com/OmarAflak/Bluetooth-Library)
+3. [kai-morich/SimpleBluetoothTerminal](https://github.com/kai-morich/SimpleBluetoothTerminal)
+4. [harry1453/android-bluetooth-serial](https://github.com/harry1453/android-bluetooth-serial)
+5. [ThanosFisherman/BlueFlow](https://github.com/ThanosFisherman/BlueFlow)
 
 Licence
 ------
