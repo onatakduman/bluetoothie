@@ -30,7 +30,7 @@ plugins {
 
 ext.versionMajor = 00
 ext.versionMinor = 00
-ext.versionPatch = 01
+ext.versionPatch = 02
 ext.versionClassifier = "beta"
 ext.isSnapshot = true
 
@@ -40,7 +40,7 @@ ext.targetSdkVersion = 30
 
 android {
     compileSdkVersion project.ext.compileSdkVersion
-    buildToolsVersion "30.0.1"
+    buildToolsVersion "30.0.3"
     defaultConfig {
         minSdkVersion project.ext.minimumSdkVersion
         targetSdkVersion project.ext.targetSdkVersion
