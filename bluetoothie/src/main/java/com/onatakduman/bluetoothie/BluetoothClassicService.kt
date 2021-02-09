@@ -365,7 +365,7 @@ class BluetoothClassicService private constructor(bluetoothConfiguration: Blueto
                                     try {
                                         bufferedOutputStream.write(bufferC, 0, length)
                                         bufferedOutputStream.flush()
-                                        sleep(5)
+                                        sleep(7)
                                     } catch (e: IOException) {
                                         sleep(200)
                                         e.printStackTrace()

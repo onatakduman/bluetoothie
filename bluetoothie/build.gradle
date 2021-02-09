@@ -30,7 +30,7 @@ plugins {
 
 ext.versionMajor = 00
 ext.versionMinor = 00
-ext.versionPatch = 02
+ext.versionPatch = 03
 ext.versionClassifier = "beta"
 ext.isSnapshot = true
 
