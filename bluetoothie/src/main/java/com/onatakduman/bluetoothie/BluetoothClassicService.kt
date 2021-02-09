@@ -365,7 +365,7 @@ class BluetoothClassicService private constructor(bluetoothConfiguration: Blueto
                                     try {
                                         bufferedOutputStream.write(bufferC, 0, length)
                                         bufferedOutputStream.flush()
-                                        sleep(7)
+                                        sleep(20)
                                     } catch (e: IOException) {
                                         sleep(200)
                                         e.printStackTrace()
@@ -374,6 +374,8 @@ class BluetoothClassicService private constructor(bluetoothConfiguration: Blueto
                                     sendBytes += length.toLong()
                                 }
                                 length = it.read(bufferC)
+//                                var percentage = calculatePercentage(sendBytes, totalLength)
+//                                if (percentage >= 0)
                                 onEventCallback?.onDataTransfer(sendBytes, totalLength)
                             }
                         } catch (e: Exception) {
@@ -390,6 +392,11 @@ class BluetoothClassicService private constructor(bluetoothConfiguration: Blueto
                     }
                 }
             }
+        }
+
+        private fun calculatePercentage(send: Long, total: Int): Int {
+            val per = (send.toFloat() * 1.0f) / (total.toFloat() * 1.0f)
+            return (per * 100.0f).toInt()
         }
 
         fun cancel() {
