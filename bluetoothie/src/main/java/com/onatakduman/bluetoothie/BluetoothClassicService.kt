@@ -351,31 +351,39 @@ class BluetoothClassicService private constructor(bluetoothConfiguration: Blueto
         fun write(buffer: ByteArray) {
             thread {
                 if (buffer.size > 2048) {
+                    val totalPackageCount = buffer.size / getConfiguration().packageSize
                     val byteArrayInputStream = ByteArrayInputStream(buffer)
                     BufferedInputStream(byteArrayInputStream).use {
                         val bufferedOutputStream = BufferedOutputStream(mmOutStream)
                         try {
                             var sendBytes = 0L
+                            var sendPackageCounter = 0
                             var length: Int
                             val totalLength: Int = buffer.size
-                            val bufferC = ByteArray(620)
+                            val bufferC = ByteArray(getConfiguration().packageSize)
                             length = it.read(bufferC)
                             while (length > -1) {
                                 if (length > 0) {
                                     try {
                                         bufferedOutputStream.write(bufferC, 0, length)
                                         bufferedOutputStream.flush()
-                                        sleep(10)
+                                        if (getConfiguration().useDelayBetweenPackages)
+                                            sleep(getConfiguration().delayBetweenPackages)
                                     } catch (e: IOException) {
-                                        sleep(200)
+                                        sleep(200L)
                                         e.printStackTrace()
                                         break
                                     }
                                     sendBytes += length.toLong()
+                                    sendPackageCounter++
                                 }
                                 length = it.read(bufferC)
-//                                var percentage = calculatePercentage(sendBytes, totalLength)
-//                                if (percentage >= 0)
+                                if (getConfiguration().useDelayPerPackages) {
+                                    if(sendPackageCounter == getConfiguration().perPackageSize){
+                                        sleep(getConfiguration().perPackageDelay)
+                                        sendPackageCounter = 0
+                                    }
+                                }
                                 onEventCallback?.onDataTransfer(sendBytes, totalLength)
                             }
                         } catch (e: Exception) {

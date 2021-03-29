@@ -42,6 +42,13 @@ class App : Application() {
         config.deviceName = "Bluetooth Sample"
         config.callListenersInMainThread = true
 
+        config.packageSize = 620 //
+        config.useDelayBetweenPackages = true
+        config.delayBetweenPackages = 10L // max 50L
+        config.useDelayPerPackages = true
+        config.perPackageSize = 10 // every 10 package sent use perPackageDelay
+        config.perPackageDelay = 15L // max 50L
+
         config.uuid = BLUETOOTH_SPP // For Classic
         BluetoothService.init(config)
     }

@@ -55,6 +55,12 @@ class BluetoothConfiguration {
     var uuid: UUID? = null
     var uuidService: UUID? = null
     var uuidCharacteristic: UUID? = null
+    var packageSize = 620
+    var useDelayBetweenPackages = false
+    var delayBetweenPackages = 10L
+    var useDelayPerPackages = false
+    var perPackageSize = 10
+    var perPackageDelay = 10L
 
     /**
      * Preferred transport for GATT connections to remote dual-mode devices
